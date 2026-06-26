@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## CHAT-APP
 
 A full‑stack chat application with a React (Vite) client and an Express/MongoDB server, integrated with Stream Chat for real‑time messaging and video.
@@ -136,7 +135,3 @@ The server entry boots `server/app.js` through `server/server.js` and listens on
 ISC (as per `server/package.json`).
 
 
-=======
-# Chat-App
-A chat app with video call feature
->>>>>>> 0cf8547742adc57fdbd39268de1304c3af142d25
