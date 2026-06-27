@@ -14,17 +14,23 @@ dbConnect();
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-  ],
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    credentials: true,
+  })
+);
 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+
+// health route
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
 
 // Routes
 app.use('/auth', authRoutes);
